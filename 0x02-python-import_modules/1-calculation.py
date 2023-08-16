@@ -7,7 +7,12 @@ if __name__ == "__main__":
     a = 10
     b = 5
 
-    print("{} + {} = {}".format(a, b, add(a, b)))
-    print("{} - {} = {}".format(a, b, sub(a, b)))
-    print("{} * {} = {}".format(a, b, mul(a, b)))
-    print("{} / {} = {}".format(a, b, div(a, b)))
+    result-add = add(a, b)
+    result-sub = sub(a, b)
+    result-mul = mul(a, b)
+    result-div = div(a, b)
+
+    print("{} + {} = {}".format(a, b, result-add))
+    print("{} - {} = {}".format(a, b, result-sub))
+    print("{} * {} = {}".format(a, b, result-mul))
+    print("{} / {} = {}".format(a, b, result-div))

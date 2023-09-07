@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Solves the N-queens puzzle.
 
-Determines all possible solutions for placing N non-attacking queens on an NxN chessboard.
+Determines all possible solutions for placing N non-attacking queens on an
+ NxN chessboard.
 
 Example:
     $ ./101-nqueens.py N
@@ -13,7 +14,8 @@ Attributes:
     solutions (list): A list of lists containing solutions.
 
 Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]],
-where `r` and `c` represent the row and column, respectively, where a queen must be placed on the chessboard.
+where `r` and `c` represent the row and column, respectively, where a queen
+ must be placed on the chessboard.
 """
 import sys
 
@@ -54,7 +56,8 @@ def get_solution(board):
         board (list): The chessboard with queens placed.
 
     Returns:
-        list: A list of queen positions in the format [[r, c], [r, c], [r, c], [r, c]].
+        list: A list of queen positions in the format
+          [[r, c], [r, c], [r, c], [r, c]].
     """
     solution = []
     for r in range(len(board)):
@@ -139,7 +142,8 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1, queens + 1, solutions)
+            solutions = (
+                recursive_solve(tmp_board, row + 1, queens + 1, solutions))
 
     return solutions
 

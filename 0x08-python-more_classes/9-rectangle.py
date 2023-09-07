@@ -90,7 +90,8 @@ class Rectangle:
             Rectangle: The Rectangle object with the greater area.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If either rect_1 or rect_2 is not an instance of
+              Rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -120,11 +121,13 @@ class Rectangle:
         Return the string representation of the Rectangle.
 
         Returns:
-            str: The string representation of the Rectangle in the format "Rectangle(width, height)".
+            str: The string representation of the Rectangle in the format
+              "Rectangle(width, height)".
         """
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Print a message when a Rectangle object is deleted and update the instance count."""
+        """Print a message when a Rectangle object is deleted and update
+        the instance count."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
